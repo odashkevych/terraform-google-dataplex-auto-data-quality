@@ -14,6 +14,6 @@
 
 terraform {
   backend "gcs" {
-    bucket = "PROJECT_ID-tfstate-prod"
+    bucket = "bdag-data-quality-demo-tfstate-prod"
   }
 }

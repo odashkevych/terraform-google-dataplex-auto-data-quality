@@ -14,7 +14,7 @@
 
 module "deploy-prod" {
   source                 = "../../modules/deploy"
-  project_id             = "PROJECT_ID"
+  project_id             = "bdag-data-quality-demo"
   data_quality_spec_file = "rules/orders.dev.yaml"
   environment            = "prod"
 }
