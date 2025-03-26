@@ -14,7 +14,7 @@
 
 locals {
   env = var.environment
-  table = var.environment
+  table = var.source_table
 }
 
 module "project-services" {
