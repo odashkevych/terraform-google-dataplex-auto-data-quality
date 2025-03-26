@@ -14,6 +14,8 @@
 
 locals {
   env = var.environment
+  project = var.source_project
+  dataset = var.source_dataset
   table = var.source_table
 }
 
