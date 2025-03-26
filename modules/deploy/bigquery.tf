@@ -18,9 +18,9 @@
 # # Create the BigQuery dataset
 resource "google_bigquery_dataset" "dataset" {
   project                    = module.project-services.project_id
-  dataset_id                 = "${local.env}_${random_id.id.hex}"
-  friendly_name              = "${local.env} table"
-  description                = "${local.env} table"
+  dataset_id                 = local.dataset
+  friendly_name              = "${local.table} table"
+  description                = "${local.table} table"
   location                   = var.region
   labels                     = var.labels
   delete_contents_on_destroy = var.force_destroy
@@ -30,7 +30,7 @@ resource "google_bigquery_table" "table" {
   project             = module.project-services.project_id
   deletion_protection = var.deletion_protection
   dataset_id          = google_bigquery_dataset.dataset.dataset_id
-  table_id            = local.env
+  table_id            = local.table
 
   schema = file("${path.module}/${var.schema_file}")
 }
