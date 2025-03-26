@@ -18,7 +18,7 @@
 # # Create the BigQuery dataset
 resource "google_bigquery_dataset" "dataset" {
   project                    = module.project-services.project_id
-  dataset_id                 = local.dataset
+  dataset_id                 = "${local.dataset}_${random_id.id.hex}"
   friendly_name              = "${local.table} table"
   description                = "${local.table} table"
   location                   = var.region
