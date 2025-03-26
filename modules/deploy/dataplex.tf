@@ -13,7 +13,7 @@
 # limitations under the License.
 
 resource "google_dataplex_datascan" "dq_scan" {
-  location     = var.region
+  location     = "europe-west1"
   data_scan_id = "${local.table}-${local.env}-scan"
   labels = {
     environment = local.env
