@@ -56,13 +56,13 @@ variable "environment" {
 variable "source_project" {
   type        = string
   description = "Source project for the data"
-  default     = "bigquery-public-data"
+  default     = "bdag-data-quality-demo"
 }
 
 variable "source_dataset" {
   type        = string
   description = "Source dataset for the data"
-  default     = "thelook_ecommerce"
+  default     = "thelook_ecommerce_eu"
 }
 
 variable "source_table" {
